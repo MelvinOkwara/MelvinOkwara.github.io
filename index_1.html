@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Melvin Okwara — Software Engineer</title>
+<meta name="description" content="Software engineer specializing in cloud and backend. Builder of Odinscores and the Odins Pharmacy online store. Available for new projects and roles.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Melvin Okwara — Software Engineer · Cloud &amp; Backend">
+<meta property="og:description" content="Software engineer specializing in cloud and backend. Builder of Odinscores and the Odins Pharmacy online store. Available for new projects and roles.">
+<meta property="og:site_name" content="Melvin Okwara">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b8f5f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+  /* Layout: single mobile-first column — full-bleed hero band, then work cards, services, contact. */
+  :root{
+    --bg:#f6f8f6; --surface:#ffffff; --surface-2:#eef2ee;
+    --fg:#141a17; --muted:#5a6a62; --line:#dde5df;
+    --accent:#0b8f5f; --accent-ink:#ffffff; --accent-soft:#e2f2ea;
+    --warm:#b5761e; --warm-soft:#f6ecd8;
+    --hero-1:#0c1a14; --hero-2:#103a2a; --hero-fg:#eaf4ee; --hero-muted:#a7c4b6;
+    --radius:16px; --maxw:620px;
+    --display:"Space Grotesk",system-ui,sans-serif;
+    --body:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#0b100e; --surface:#121a16; --surface-2:#17211c;
+    --fg:#e8efea; --muted:#9bb0a6; --line:#223029;
+    --accent:#2fcf96; --accent-ink:#07140e; --accent-soft:#102a20;
+    --warm:#e3b263; --warm-soft:#231a0e;
+    --hero-1:#07120d; --hero-2:#0f2c20; --hero-fg:#eaf4ee; --hero-muted:#9dbcae;
+    color-scheme:dark;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#0b100e; --surface:#121a16; --surface-2:#17211c;
+    --fg:#e8efea; --muted:#9bb0a6; --line:#223029;
+    --accent:#2fcf96; --accent-ink:#07140e; --accent-soft:#102a20;
+    --warm:#e3b263; --warm-soft:#231a0e;
+    --hero-1:#07120d; --hero-2:#0f2c20; --hero-fg:#eaf4ee; --hero-muted:#9dbcae;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .container{width:100%;max-width:var(--maxw);margin-inline:auto;
+    padding-left:max(16px,env(safe-area-inset-left,0px));
+    padding-right:max(16px,env(safe-area-inset-right,0px))}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.12}
+
+  /* Hero */
+  .hero{position:relative;color:var(--hero-fg);
+    background:radial-gradient(120% 90% at 85% 0%,var(--hero-2) 0%,var(--hero-1) 60%);
+    margin-top:calc(-1 * env(safe-area-inset-top,0px));
+    padding-top:calc(env(safe-area-inset-top,0px) + 2.6rem);
+    padding-bottom:2.4rem;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -10% -40% auto;width:60%;height:70%;
+    background:radial-gradient(circle,rgba(47,207,150,.18),transparent 70%);pointer-events:none}
+  .eyebrow{font-family:var(--display);font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    font-size:.72rem;color:var(--hero-muted)}
+  .hero h1{font-size:clamp(2rem,9vw,2.8rem);font-weight:700;margin:.5rem 0 .1rem;letter-spacing:-.01em}
+  .role{font-family:var(--display);font-weight:500;font-size:1.02rem;color:#bfe8d5}
+  .statement{margin:1rem 0 0;max-width:34ch;color:var(--hero-fg);font-size:1.02rem;opacity:.95}
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
+  .chip{font-size:.75rem;font-weight:500;padding:.26rem .6rem;border-radius:999px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#dbeee4;white-space:nowrap}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-weight:600;
+    font-size:.95rem;padding:.72rem 1.1rem;border-radius:12px;text-decoration:none;border:1px solid transparent;
+    cursor:pointer;transition:transform .12s ease,background .12s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-wa{background:#25d366;color:#07140e}
+  .btn-ghost{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:var(--hero-fg)}
+  .btn svg{width:18px;height:18px;flex:0 0 auto}
+
+  /* Sections */
+  section{padding-block:2.2rem}
+  .sec-label{font-family:var(--display);font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    font-size:.72rem;color:var(--muted);margin-bottom:1rem}
+
+  /* Work cards */
+  .work{display:flex;flex-direction:column;gap:1.1rem}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .frame{background:var(--surface-2);border-bottom:1px solid var(--line);padding:.55rem .7rem;
+    display:flex;align-items:center;gap:.5rem}
+  .dots{display:flex;gap:.32rem}
+  .dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+  .url{font-family:var(--body);font-size:.76rem;color:var(--muted);background:var(--bg);
+    border:1px solid var(--line);border-radius:999px;padding:.16rem .6rem;overflow:hidden;
+    text-overflow:ellipsis;white-space:nowrap}
+  .shot{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center}
+  .panel{aspect-ratio:16/10;display:grid;place-items:center;position:relative;
+    background:radial-gradient(130% 120% at 20% 0%,var(--warm-soft),var(--surface) 70%)}
+  .panel .rx{font-family:var(--display);font-weight:700;color:var(--warm);font-size:clamp(2.2rem,12vw,3.4rem);
+    letter-spacing:.02em;display:flex;align-items:center;gap:.5rem}
+  .panel .rx span{display:grid;place-items:center;width:1.5em;height:1.5em;border-radius:18px;
+    background:var(--warm);color:var(--surface);font-size:.8em}
+  .card-body{padding:1.1rem 1.1rem 1.2rem}
+  .card-body h3{font-size:1.25rem;font-weight:700}
+  .tag{display:inline-block;font-size:.72rem;font-weight:500;color:var(--muted)}
+  .role-pill{font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+    padding:.2rem .55rem;border-radius:999px;display:inline-block;margin-bottom:.55rem}
+  .card-body p{margin:.1rem 0 0;color:var(--fg)}
+  .tags{display:flex;flex-wrap:wrap;gap:.35rem .6rem;margin-top:.85rem}
+  .tags .tag::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;
+    background:var(--accent);margin-right:.4rem;vertical-align:middle}
+  .visit{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-family:var(--display);
+    font-weight:600;font-size:.92rem;color:var(--accent);text-decoration:none}
+  .visit svg{width:16px;height:16px;transition:transform .12s ease}
+  .visit:hover svg{transform:translate(2px,-2px)}
+
+  /* Services */
+  .services{display:grid;gap:.7rem}
+  .svc{display:flex;gap:.7rem;align-items:flex-start;background:var(--surface);border:1px solid var(--line);
+    border-radius:12px;padding:.85rem .95rem}
+  .svc b{font-family:var(--display);font-weight:600;font-size:.98rem}
+  .svc p{margin:.1rem 0 0;font-size:.88rem;color:var(--muted)}
+  .svc .mk{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:var(--accent-soft);
+    color:var(--accent);display:grid;place-items:center}
+  .svc .mk svg{width:18px;height:18px}
+
+  /* Contact */
+  .contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem}
+  .contact h2{font-size:1.3rem;font-weight:700;margin-bottom:.2rem}
+  .contact .lead{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+  .rows{display:flex;flex-direction:column;gap:.55rem}
+  .row{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;background:var(--bg);
+    border:1px solid var(--line);border-radius:11px;padding:.6rem .7rem}
+  .row .k{font-family:var(--display);font-weight:600;font-size:.76rem;color:var(--muted);
+    min-width:4.6rem;letter-spacing:.03em}
+  .row .v{font-size:.9rem;font-weight:500;overflow-wrap:anywhere;flex:1;min-width:0}
+  .row a.v{color:var(--accent);text-decoration:none}
+  .copy{font-family:var(--display);font-size:.72rem;font-weight:600;color:var(--muted);
+    background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:.28rem .55rem;
+    cursor:pointer;transition:color .12s,border-color .12s}
+  .copy:hover{color:var(--accent);border-color:var(--accent)}
+  .copy.done{color:var(--accent);border-color:var(--accent)}
+  .wa-wide{margin-top:1rem;width:100%;justify-content:center;background:#25d366;color:#07140e}
+
+  footer{padding-block:2rem 2.6rem;text-align:center;color:var(--muted);font-size:.82rem}
+  footer .name{font-family:var(--display);font-weight:600;color:var(--fg)}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Software Engineer · Cloud &amp; Backend</div>
+    <h1>Melvin Okwara</h1>
+    <div class="role">I build fast, reliable software — and run it in production.</div>
+    <p class="statement">From backend systems and cloud infrastructure to complete web platforms. Here are two I designed, shipped and keep live.</p>
+    <div class="chips">
+      <span class="chip">Go</span><span class="chip">Python</span><span class="chip">JavaScript / React</span>
+      <span class="chip">AWS</span><span class="chip">Kubernetes</span><span class="chip">Docker</span>
+      <span class="chip">Terraform</span><span class="chip">CI/CD</span><span class="chip">PostgreSQL</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/2347061936088?text=Hi%20Melvin%2C%20I%20saw%20your%20work%20and%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 2.1.55 4.06 1.6 5.82L2 22l4.42-1.68a9.9 9.9 0 0 0 5.62 1.74h.01c5.46 0 9.9-4.45 9.9-9.9S17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.12.07-1.8-.11-.42-.14-.95-.31-1.64-.61-2.88-1.24-4.76-4.14-4.9-4.33-.15-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .9 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.12.58.16.29.73 1.2 1.56 1.95 1.07.95 1.97 1.25 2.26 1.39.29.14.46.12.63-.07.17-.19.73-.85.93-1.14.19-.29.39-.24.65-.14.26.09 1.66.78 1.95.92.29.14.48.22.55.34.07.12.07.68-.17 1.36Z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/melvin-okwara-3a8b81330/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section>
+    <div class="sec-label">Selected work</div>
+    <div class="work">
+
+      <article class="card">
+        <div class="frame"><div class="dots"><i></i><i></i><i></i></div><div class="url">odinscores.com</div></div>
+        <img class="shot" loading="lazy" decoding="async" src="odinscores.webp" alt="Odinscores live sports platform homepage">
+        <div class="card-body">
+          <span class="role-pill">Built &amp; operated end-to-end</span>
+          <h3>Odinscores</h3>
+          <p>A live multi-sport scores platform covering 7 sports. A Go backend aggregates and normalizes data from multiple sports APIs with in-memory caching; the front end is an installable, six-language web app. Containerized with Docker and deployed on Fly.io behind Cloudflare.</p>
+          <div class="tags">
+            <span class="tag">Go backend</span><span class="tag">REST API</span><span class="tag">PWA</span>
+            <span class="tag">Docker</span><span class="tag">Fly.io</span><span class="tag">Cloudflare</span>
+          </div>
+          <a class="visit" href="https://odinscores.com" target="_blank" rel="noopener">Visit live site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="frame"><div class="dots"><i></i><i></i><i></i></div><div class="url">pharmacy.odins-group.com</div></div>
+        <img class="shot" loading="lazy" decoding="async" src="pharmacy.webp" alt="Odins Pharmacy online store homepage">
+        <div class="card-body">
+          <span class="role-pill">Developed &amp; maintained</span>
+          <h3>Odins Pharmaceuticals</h3>
+          <p>An online pharmacy storefront — product catalog, orders and content — that I develop and maintain end to end: performance, SEO, security and ongoing features for a real retail business.</p>
+          <div class="tags">
+            <span class="tag">E-commerce</span><span class="tag">WooCommerce</span><span class="tag">SEO</span>
+            <span class="tag">Performance</span><span class="tag">Security</span>
+          </div>
+          <a class="visit" href="https://pharmacy.odins-group.com" target="_blank" rel="noopener">Visit live site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label">What I do</div>
+    <div class="services">
+      <div class="svc"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+        <div><b>Backend &amp; API engineering</b><p>Robust services and APIs in Go and Python, with PostgreSQL, Redis and clean, testable architecture.</p></div></div>
+      <div class="svc"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.34 9 4.5 4.5 0 0 0 7 18l10.5 1Z"/></svg></div>
+        <div><b>Cloud infrastructure &amp; DevOps</b><p>AWS, Kubernetes, Docker and Terraform — CI/CD pipelines, monitoring and reliable, automated deployments.</p></div></div>
+      <div class="svc"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+        <div><b>Full-stack web platforms</b><p>Complete products from database to UI — fast, secure, SEO-ready and built to run in production.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <h2>Let's build something</h2>
+      <p class="lead">Available for software engineering, cloud and backend work. Reach me directly:</p>
+      <div class="rows">
+        <div class="row"><span class="k">WhatsApp</span><span class="v" id="phone">+234 706 193 6088</span><button class="copy" data-copy="+2347061936088">Copy</button></div>
+        <div class="row"><span class="k">Email</span><a class="v" href="mailto:okwaramelvin11@gmail.com" id="email">okwaramelvin11@gmail.com</a><button class="copy" data-copy="okwaramelvin11@gmail.com">Copy</button></div>
+        <div class="row"><span class="k">GitHub</span><a class="v" href="https://github.com/MelvinOkwara" target="_blank" rel="noopener">github.com/MelvinOkwara</a></div>
+        <div class="row"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/melvin-okwara-3a8b81330/" target="_blank" rel="noopener">Melvin Okwara</a></div>
+      </div>
+      <a class="btn wa-wide" href="https://wa.me/2347061936088?text=Hi%20Melvin%2C%20I%20saw%20your%20work%20and%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 2.1.55 4.06 1.6 5.82L2 22l4.42-1.68a9.9 9.9 0 0 0 5.62 1.74h.01c5.46 0 9.9-4.45 9.9-9.9S17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.12.07-1.8-.11-.42-.14-.95-.31-1.64-.61-2.88-1.24-4.76-4.14-4.9-4.33-.15-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.57-.36.76-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .9 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.29.29-.12.58.16.29.73 1.2 1.56 1.95 1.07.95 1.97 1.25 2.26 1.39.29.14.46.12.63-.07.17-.19.73-.85.93-1.14.19-.29.39-.24.65-.14.26.09 1.66.78 1.95.92.29.14.48.22.55.34.07.12.07.68-.17 1.36Z"/></svg>
+        Message me on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="name">Melvin Okwara</span> · Software Engineer · Lagos, Nigeria
+  </footer>
+</main>
+
+<script>
+  document.querySelectorAll(".copy").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var text=btn.getAttribute("data-copy");
+      function ok(){var o=btn.textContent;btn.textContent="Copied";btn.classList.add("done");
+        setTimeout(function(){btn.textContent=o;btn.classList.remove("done");},1400);}
+      try{
+        navigator.clipboard.writeText(text).then(ok).catch(select);
+      }catch(e){select();}
+      function select(){
+        try{
+          var r=document.createRange(),sel=window.getSelection();
+          var el=btn.previousElementSibling;r.selectNodeContents(el);
+          sel.removeAllRanges();sel.addRange(r);ok();
+        }catch(_){}
+      }
+    });
+  });
+</script>
+</body>
+</html>
